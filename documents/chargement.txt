@@ -1,0 +1,13 @@
+Lors de l'appel de la méthode ChargerMagasin,
+
+Dans un premier temps, la méthode crée un objet ChargeurMagasin,
+Ensuite, cette classe va appeler la méthode chargerMagasin.
+
+Cette méthode chargerMagasin, crée un objet Magasin.
+Ensuite, ChargeurMagasin crée un objet ChargeurCD et appelle la méthode chargerCD de cette classe.
+
+De là, la méthode chargerCD crée un objet de la classe CD. Elle appelle ensuite les méthodes extrairePiste et ajouterPiste tant qu'il y a des pistes à ajouter au CD.
+
+Ensuite, une fois le CD crée, il est renvoyé dans un premier temps à ChargeurCD puis à ChargeurMagasin, celui-ci appelle la méthode ajouterCD et l'ajoute au Magasin précedemment crée.
+
+Enfin, ChargeurMagasin renvoie le magasin crée et rempli.
