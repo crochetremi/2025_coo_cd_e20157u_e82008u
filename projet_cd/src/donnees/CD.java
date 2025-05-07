@@ -97,5 +97,8 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+	public boolean trierCd(CD cd){
+		throw new Error("TODO");
+	}
+
 }

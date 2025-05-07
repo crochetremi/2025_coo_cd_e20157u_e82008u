@@ -68,12 +68,15 @@ public class Magasin {
 		return(res);
 	}
 
-	/*
+
 	// TODO  ajouter une methode de tri
 	public void trierAlbum(){
 
+		ArrayList<CD> l = new ArrayList();
+
 	}
 
+	/*
 	public void trierArtiste(){
 
 	}
