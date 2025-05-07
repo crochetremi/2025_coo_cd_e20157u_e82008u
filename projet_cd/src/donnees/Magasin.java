@@ -68,6 +68,7 @@ public class Magasin {
 		return(res);
 	}
 
+	/*
 	// TODO  ajouter une methode de tri
 	public void trierAlbum(){
 
@@ -76,5 +77,5 @@ public class Magasin {
 	public void trierArtiste(){
 
 	}
-
+	*/
 }
