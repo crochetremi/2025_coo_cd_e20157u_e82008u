@@ -69,11 +69,26 @@ public class Magasin {
 	}
 
 
-	// TODO  ajouter une methode de tri
-	public void trierAlbum(){
+	public void trierAlbum() {
+		if (listeCds.size() <= 1) {
+			return;
+		}
 
-		ArrayList<CD> l = new ArrayList();
+		ArrayList<CD> listeTriee = new ArrayList<>();
 
+		for (int i = 0; i < listeCds.size(); i++) {
+			CD cdCourant = listeCds.get(i);
+			int j = 0;
+
+			while (j < listeTriee.size() && listeTriee.get(j).getNomCD().compareTo(cdCourant.getNomCD()) < 0) {
+				j++;
+			}
+
+			listeTriee.add(j, cdCourant);
+		}
+
+		listeCds.clear();
+		listeCds.addAll(listeTriee);
 	}
 
 	/*

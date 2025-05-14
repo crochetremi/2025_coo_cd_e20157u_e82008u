@@ -97,8 +97,14 @@ public class CD {
 		return (resultat);
 	}
 
+	public String getNomCD(){
+		return this.nomCD;
+	}
+
 	public boolean trierCd(CD cd){
 		throw new Error("TODO");
 	}
 
 }
+
+
