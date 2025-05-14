@@ -18,4 +18,18 @@ public class TestTrierCd {
         assertEquals("Whitney Houston", m.getCd(m.getNombreCds()-1).getNomCD());
     }
 
+    @Test
+    public void testTrierArtiste() throws Exception {
+        ChargeurMagasin cm = new ChargeurMagasin("projet_cd/musicbrainzSimple/");
+        Magasin m = cm.chargerMagasin();
+        m.trierArtiste();
+
+        CD c1 = m.getCd(m.getNombreCds() - 1);
+        CD c2 = m.getCd(0);
+
+        assertEquals("Bénabar", m.getCd(0).getNomArtiste());
+        assertEquals("Zebda", m.getCd(m.getNombreCds()-1).getNomArtiste());
+    }
+
+
 }

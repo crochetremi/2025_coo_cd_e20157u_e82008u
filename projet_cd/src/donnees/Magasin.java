@@ -91,6 +91,28 @@ public class Magasin {
 		}
 	}
 
+	public void trierArtiste() {
+		if (listeCds.size() <= 1) {
+			return;
+		}
+
+		for (int i = 0; i < listeCds.size() - 1; i++) {
+			int minIndex = i;
+
+			for (int j = i + 1; j < listeCds.size(); j++) {
+				if (listeCds.get(j).getNomArtiste().compareTo(listeCds.get(minIndex).getNomArtiste()) < 0) {
+					minIndex = j;
+				}
+			}
+
+			if (minIndex != i) {
+				CD temp = listeCds.get(i);
+				listeCds.set(i, listeCds.get(minIndex));
+				listeCds.set(minIndex, temp);
+			}
+		}
+	}
+
 	/*
 	public void trierArtiste(){
 

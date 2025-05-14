@@ -100,6 +100,9 @@ public class CD {
 	public String getNomCD(){
 		return this.nomCD;
 	}
+	public String getNomArtiste(){
+		return this.nomArtiste;
+	}
 
 	public boolean trierCd(CD cd){
 		throw new Error("TODO");
