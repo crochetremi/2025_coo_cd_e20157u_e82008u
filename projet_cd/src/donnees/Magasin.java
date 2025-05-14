@@ -74,21 +74,21 @@ public class Magasin {
 			return;
 		}
 
-		ArrayList<CD> listeTriee = new ArrayList<>();
+		for (int i = 0; i < listeCds.size() - 1; i++) {
+			int minIndex = i;
 
-		for (int i = 0; i < listeCds.size(); i++) {
-			CD cdCourant = listeCds.get(i);
-			int j = 0;
-
-			while (j < listeTriee.size() && listeTriee.get(j).getNomCD().compareTo(cdCourant.getNomCD()) < 0) {
-				j++;
+			for (int j = i + 1; j < listeCds.size(); j++) {
+				if (listeCds.get(j).getNomCD().compareTo(listeCds.get(minIndex).getNomCD()) < 0) {
+					minIndex = j;
+				}
 			}
 
-			listeTriee.add(j, cdCourant);
+			if (minIndex != i) {
+				CD temp = listeCds.get(i);
+				listeCds.set(i, listeCds.get(minIndex));
+				listeCds.set(minIndex, temp);
+			}
 		}
-
-		listeCds.clear();
-		listeCds.addAll(listeTriee);
 	}
 
 	/*
