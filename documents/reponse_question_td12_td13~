@@ -1,0 +1,11 @@
+Question 3
+Pour l'instant lorsqu'on ajoute un nouveau tri, il faut dupliquer l'ancien
+algorithme. On modifie uniquement la classe magasin, (à part les getter)
+
+Ce n'est pas efficace à maintenir sur le long terme car cela crée un code très
+long et très lourd.
+
+Question 4
+Oui nous avons copié collé des bouts de code, notamment pour les méthodes de
+tri, le danger est d'oublier de faire une modification ce qui générera
+une erreur dans le nouveau code.
